@@ -54,6 +54,11 @@ namespace SimpleWebApp.Controllers
         private void WriteToFile(RequestInfo requestInfo)
         {
             var file = Server.MapPath("~/App_Data/RequestsInfo.txt");
+            if (!System.IO.File.Exists(file))
+            {
+               System.IO.File.Create(@file).Dispose();
+                
+            }
             System.IO.File.AppendAllText(@file, requestInfo.ToString());
         }
     }

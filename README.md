@@ -1,0 +1,2 @@
+WebApi project - it's simple Web Api project without Database (so data is stored in list and can not change dynamically)
+WebApp project - project with forms which send requests, but without any storage
